@@ -1,0 +1,31 @@
+html:not(.gss-ready) {
+  opacity:0;
+}
+
+html {
+
+}
+
+* {
+  -webkit-backface-visibility: hidden;
+  margin: 0px;
+  padding: 0px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+div {
+  font-size: 4em;
+  font-family: helvetica
+  color: black;
+}
+
+
+a:link {
+    color: #7DB4B5;
+}
+
+/* visited link */
+a:visited {
+    color: #7DB4B5;
+}

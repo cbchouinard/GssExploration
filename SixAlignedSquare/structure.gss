@@ -1,0 +1,16 @@
+
+.square {
+  size: == ::window[width] / 8 !require;
+}
+
+@h |-(#s1)-(#s2)-(#s3)-| 
+    {
+      &:next[top] == &[top];
+    };
+
+@h |-(#s4)-(#s5)-(#s6)-|
+    {
+      &:next[top] == &[top];
+    };
+
+@v |-(#s1)-(#s4)-|;

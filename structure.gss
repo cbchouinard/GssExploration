@@ -1,0 +1,8 @@
+
+div {
+  width: == &[intrinsic-width];
+  height: == &[intrinsic-height];
+}
+
+@h |-(div)-|;
+@v |-(div)-|;
