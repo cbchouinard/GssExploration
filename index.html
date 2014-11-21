@@ -20,6 +20,15 @@
         <link rel="stylesheet" href="structure.gss" type="text/gss">        
     </head>
     <body>
+
+      <style type="text/css"> 
+            html:not(.gss-ready) { opacity: 0; } 
+        </style>
+        <noscript> 
+            <style type="text/css"> html:not(.gss-ready) { opacity: 1; } 
+            </style> 
+        </noscript>
+
         <div>
             <p>
                 Here are a few examples of GSS:
@@ -33,5 +42,6 @@
         <script type="text/javascript">
             GSS.document = new GSS(document, {"gap": 20, "outer-radius": 20});
         </script>
+        
     </body>
     </html>
