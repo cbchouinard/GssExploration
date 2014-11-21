@@ -4,5 +4,10 @@ div {
   height: == &[intrinsic-height];
 }
 
+p {
+  width: == &[intrinsic-width];
+  height: == &[intrinsic-height];
+}
+
 @h |-(div)-|;
 @v |-(div)-|;
