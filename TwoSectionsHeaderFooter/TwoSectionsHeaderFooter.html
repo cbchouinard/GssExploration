@@ -20,36 +20,38 @@
         <link rel="stylesheet" href="structure.gss" type="text/gss">        
     </head>
     <body>
+        <style type="text/css"> 
+            html:not(.gss-ready) { opacity: 0; } 
+        </style>
+        <noscript> 
+            <style type="text/css"> html:not(.gss-ready) { opacity: 1; } 
+            </style> 
+        </noscript>
 
-      <style type="text/css"> 
-        html:not(.gss-ready) { opacity: 0; } 
-    </style>
-    <noscript> 
-        <style type="text/css"> html:not(.gss-ready) { opacity: 1; } 
-        </style> 
-    </noscript>
+        <header>
+            <div>-- Your header content --</div>
+        </header>
+        
+        <section class="entranceSection">
+            <article>
+                -- Your entrance section content --
+            </article>
+        </section>
 
-    <div>
-        <p>Here are a few examples of layout using GSS version 1.0.0.rc1:</p>
+        <section class="contentSection">
+            <article>
+                -- Your content --
+            </article>
+        </section>
 
-        <ul>
-            <li>
-                <a href="SixAlignedSquare/SixAlignedSquare.html">
-                    Six Aligned Squares
-                </a>
-            </li>
-            <li>
-                 <a href="TwoSectionsHeaderFooter/TwoSectionsHeaderFooter.html">
-                    Two full screen sections with header and footer
-                </a>
-            </li>
-        </ul>
-    </div>
+        <footer>
+            <div>-- Your footer content --</div>
+        </footer>
 
-    <script src="/bower_components/gss/dist/gss.js"></script>
-    <script type="text/javascript">
-        GSS.document = new GSS(document, {"gap": 20, "outer-radius": 20});
-    </script>
+        <script src="/bower_components/gss/dist/gss.js"></script>
+        <script type="text/javascript">
+            GSS.document = new GSS(document, {"gap": 20, "outer-radius": 20});
+        </script>
 
-</body>
-</html>
+    </body>
+    </html>

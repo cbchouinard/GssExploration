@@ -1,0 +1,76 @@
+[headerHeight] == ::window[height] * 0.2 !require;
+[footerHeight] == 100 !require;
+[width] == ::window[width] !require;
+
+header {
+	width: == [width];
+	height: == [headerHeight] !require;
+	top: == 0 !require;
+	left: == 0 !require;
+
+	div {
+		height: == &[intrinsic-height];
+		width: == &[intrinsic-width];
+		center-x: == (header)[center-x];
+		center-y: == (header)[center-y];
+	}
+
+	/* Why don't I obtain the same result with this VFL has with the center-x & center-y?*/
+	/*@v |-(& div)-| in(&);
+	@h |-(& div)-| in(&);*/
+}
+
+article {
+	height: == &[intrinsic-height];
+	width: == &[intrinsic-width];
+}
+
+.entranceSection  {
+	width: == [width];
+	height: == ::window[height] - [headerHeight] !require;
+
+	article {
+		center-x: == (.entranceSection)[center-x];
+		center-y: == (.entranceSection)[center-y];
+	}
+
+	/*@v |-(& article)-| in(&);
+	@h |-(& article)-| in(&);*/
+}
+
+.contentSection {
+	width: == [width];
+	height: == ::window[height] - [footerHeight] !require;
+
+	article {
+		center-x: == (.contentSection)[center-x];
+		center-y: == (.contentSection)[center-y];
+	}
+
+	/*@v |-(& article)-| in(&);
+	@h |-(& article)-| in(&);*/
+}
+
+footer {
+	width: == [width];
+	height: == [footerHeight] !require;
+
+	
+	div {
+		height: == &[intrinsic-height];
+		width: == &[intrinsic-width];
+	}
+
+	@v |-(& div)-| in(&);
+	@h |-(& div)-| in(&);
+}
+
+
+
+
+@v |-(header)-(.entranceSection)-(.contentSection)-(footer)-| in(body) gap(0) !require 
+	{
+		&[center-x] == ::window[center-x];
+		&:next[left] == &[left];
+	}; 
+

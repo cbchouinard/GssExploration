@@ -1,0 +1,34 @@
+html:not(.gss-ready) {
+  opacity:0;
+}
+
+html {
+  overflow-x: hidden;
+  font-size: 2em;
+  font-family: helvetica
+  color: black;
+}
+
+* {
+  -webkit-backface-visibility: hidden;
+  margin: 0px;
+  padding: 0px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #EF4341;
+}
+
+.entranceSection {
+  background-color: #83CFCB;
+}
+
+.contentSection {
+  background-color: #02B3A9;
+}
+
+footer {
+  background-color: #FCF374; 
+}
