@@ -9,5 +9,10 @@ p {
   height: == &[intrinsic-height];
 }
 
-@h |-(div)-|;
-@v |-(div)-|;
+a {
+  width: == &[intrinsic-width];
+  height: == &[intrinsic-height];
+}
+
+@h |-(div)-| in(::window);
+@v |-(div)-| in(::window);
