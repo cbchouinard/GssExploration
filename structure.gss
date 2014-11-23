@@ -2,6 +2,8 @@
 div {
   width: == &[intrinsic-width];
   height: == &[intrinsic-height];
+  center-x: == ::window[center-x];
+  center-y: == ::window[center-y];
 }
 
 p {
@@ -13,6 +15,3 @@ a {
   width: == &[intrinsic-width];
   height: == &[intrinsic-height];
 }
-
-@h |-(div)-| in(::window);
-@v |-(div)-| in(::window);
