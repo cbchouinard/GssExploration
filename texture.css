@@ -22,10 +22,15 @@ div {
 
 
 a:link {
-    color: #7DB4B5;
+  color: #7DB4B5;
 }
 
 /* visited link */
 a:visited {
-    color: #7DB4B5;
+  color: #7DB4B5;
+}
+
+ul
+{
+  list-style-type: none;
 }
