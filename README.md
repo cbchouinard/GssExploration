@@ -1,4 +1,4 @@
-Gss Exploration - Sample web pages using GSS
+**Gss Exploration - Sample web pages using GSS**
 
 This small project contains some example of simple page layout using GSS. 
 
