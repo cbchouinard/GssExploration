@@ -1,0 +1,23 @@
+html:not(.gss-ready) {
+  opacity:0;
+}
+
+html {
+ 
+}
+
+* {
+  -webkit-backface-visibility: hidden;
+  margin: 0px;
+  padding: 0px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.contacts {
+  background-color: blue;
+}
+
+.team-member {
+  
+}

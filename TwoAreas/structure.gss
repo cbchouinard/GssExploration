@@ -1,0 +1,53 @@
+
+.team-member {
+	width: == &[intrinsic-width];
+	height: == &[intrinsic-height];
+}
+
+.defence {
+	width: == &[intrinsic-width];
+	height: == &[intrinsic-height];
+}
+
+.goal {
+	width: == &[intrinsic-width];
+	height: == &[intrinsic-height];
+}
+
+.offense-left {
+	width: == &[intrinsic-width];
+	height: == &[intrinsic-height];
+}
+
+.offense-right {
+	width: == &[intrinsic-width];
+	height: == &[intrinsic-height];
+}
+
+h4 {
+	width: == &[intrinsic-width];
+	height: == &[intrinsic-height];
+}
+
+.contacts {
+	height: == ::window[height] !require;
+	width: == ::window[width] !require;
+	top: == 0 !requrie;
+
+	
+	&"frontZone" { 
+		x: == 0;
+		height: == 400;
+		width: == 800;
+	}
+
+	&"backZone" {
+		x: == 0;
+		height: == 400;
+		width: == 800;
+	}
+
+	@v |~-~(&"frontZone")-(&"backZone")~-~| in(&) gap(50) !require;
+	@h |~-~(& .goal)-(& .defence)~-~| in(&"backZone") gap(20) !strong;
+	@h |~-~(& .offense-left)-(& .offense-right)~-~| in(&"frontZone") gap(10);
+}
