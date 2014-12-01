@@ -11,16 +11,12 @@ header {
 	div {
 		height: == &[intrinsic-height];
 		width: == &[intrinsic-width];
+		center-x: == (header)[center-x];
+		center-y: == (header)[center-y];
 	}
 
-	/* Why don't I obtain the same result with this VFL has with the center-x & center-y?*/
-	/* Also, it doesn't work with 'in(&)'. I thought that in the context of a selector, & was 'this' therefore
-	equivalent to 'header in this case' ? */
-	/* @v |-(& div)-| in(&);
-	   @h |-(& div)-| in(&); */
-
-	@v |-(& div)-| in(header);
-	@h |-(& div)-| in(header);
+	@v |~-~(& div)~-~| in(header) gap(0);
+	@h |~-~(& div)~-~| in(header) gap(0);
 }
 
 article {
@@ -33,15 +29,12 @@ article {
 	height: == ::window[height] - [headerHeight] !require;
 
 	article {
-		/*center-x: == (.entranceSection)[center-x];
-		center-y: == (.entranceSection)[center-y];*/
+		center-x: == (.entranceSection)[center-x];
+		center-y: == (.entranceSection)[center-y];
 	}
 
-	@v |-(& article)-| in(&) !require;
-	@h |-(& article)-| in(&) !require;
-
-	/*@v |-(& .entranceSection article)-| in(.entranceSection) !strong;
-	@h |-(& .entranceSection article)-| in(.entranceSection);*/
+	@v |~-~(& article)~-~| in(&) gap(0);
+	@h |~-~(& article)~-~| in(&) gap(0);
 }
 
 .contentSection {
@@ -49,12 +42,12 @@ article {
 	height: == ::window[height] - [footerHeight] !require;
 
 	article {
-	/*	center-x: == (.contentSection)[center-x];
-		center-y: == (.contentSection)[center-y];*/
+		center-x: == (.contentSection)[center-x];
+		center-y: == (.contentSection)[center-y];
 	}
 
-	@v |-(& article)-| in(&) !require;
-	@h |-(& article)-| in(&);
+	@v |~-~(& article)~-~| in(&) gap(0);
+	@h |~-~(& article)~-~| in(&) gap(0);
 }
 
 footer {
